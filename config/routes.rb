@@ -1,8 +1,4 @@
-require 'pry'
-
 Rails.application.routes.draw do
-
-  mount RailsAdmin::Engine => '/admin2', as: 'rails_admin'
 
   namespace :admin do
     DashboardManifest::DASHBOARDS.each do |dashboard_resource|
@@ -11,6 +7,8 @@ Rails.application.routes.draw do
 
     root controller: DashboardManifest::ROOT_DASHBOARD, action: :index
   end
+
+  mount RailsAdmin::Engine => '/admin2', as: 'rails_admin'
 
   root to: 'visitors#index'
 
