@@ -2,13 +2,12 @@
   = simple_form_for @location, url: '/shops/find' do |f|
 
     %h4.text-center{ style: "margin-top: 50px;" }
-      Put your current location
-    -#%hr{ style: "width: 100%; color: black; height: 1px; background-color:grey;" }
+      Where are you right now ?
 
     .row.centered.text-center
       .col-md-5
-        = f.input :lat, label: 'Latitude', placeholder: 'ex: 48.85'
-        = f.input :lng, label: 'Longitude', placeholder: 'ex: 2.31'
+        = f.input :lat, label: 'latitude', placeholder: 'ex: 48.85'
+        = f.input :lng, label: 'longitude', placeholder: 'ex: 2.31'
       .col-md-2
         %br
         %br
@@ -16,11 +15,10 @@
         %h5
           OR
       .col-md-5
-        = f.input :address, placeholder: 'ex: 119 avenue d\'italie, Paris'
+        = f.input :address, label: 'address', placeholder: 'ex: 119 avenue d\'italie, Paris'
 
     %h4.text-center{ style: "margin-top: 50px;" }
       Choose your filter
-    -#%hr{ style: "width: 100%; color: black; height: 1px; background-color:grey;" }
 
     .row.centered.text-center
       .col-md-5
@@ -46,7 +44,8 @@
       %thead
         %td Distance
         %td Name
-        %td Adresse
+        %td Addresse
+        %td Phone
       %tbody
         - @shops.each do |shop|
           %tr

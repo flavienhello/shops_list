@@ -1,26 +1,35 @@
 <div id="wrapper">
 
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Shops List by Flavien Hello</h2>
-                    <p>This site let you administrate a list of shops.</p>
-                    <p>Those shops are displayed to any user and are filterable by geolocalisation.</p>
-                </div>
-            </div>
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3>Shops List by Flavien Hello</h3>
+          <p>This site let you administrate a list of shops.</p>
+          <p>Those shops are displayed to any user and are filterable by geolocalisation.</p>
         </div>
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-offset-2 col-md-4" style="margin-top: 40px;">
+              <%= link_to 'Find Stores!', shops_path, class: 'btn btn-lg btn-success center-block' %>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- /#page-content-wrapper -->
+  </div>
+  <!-- /#page-content-wrapper -->
 
 </div>
 <!-- /#wrapper -->
 
 <!-- Menu Toggle Script -->
 <script>
-$("#menu-toggle").click(function(e) {
-    e.preventDefault();
-    $("#wrapper").toggleClass("toggled");
-});
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
 </script>

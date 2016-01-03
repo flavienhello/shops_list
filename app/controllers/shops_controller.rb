@@ -2,7 +2,7 @@ class ShopsController < ApplicationController
 
   def index
     @location = Location.new
-    @shops = Shop.all.first(10)
+    @shops = []
   end
 
   def find
