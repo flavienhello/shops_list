@@ -1,45 +1,47 @@
 .container
   = simple_form_for @location, url: '/shops/find' do |f|
 
-    %h3{ style: "margin-top: 50px;" }
+    %h4.text-center{ style: "margin-top: 50px;" }
       Put your current location
-    %hr{ style: "width: 100%; color: black; height: 1px; background-color:grey;" }
+    -#%hr{ style: "width: 100%; color: black; height: 1px; background-color:grey;" }
 
     .row.centered.text-center
-      .col-md-4
+      .col-md-5
         = f.input :lat, label: 'Latitude', placeholder: 'ex: 48.85'
         = f.input :lng, label: 'Longitude', placeholder: 'ex: 2.31'
-      .col-md-4
+      .col-md-2
         %br
         %br
         %br
-        %h4
+        %h5
           OR
-      .col-md-4
-        = f.input :address, placeholder: 'ex: 139 avenue d\'italie, Paris'
+      .col-md-5
+        = f.input :address, placeholder: 'ex: 119 avenue d\'italie, Paris'
 
-    %h3{ style: "margin-top: 50px;" }
+    %h4.text-center{ style: "margin-top: 50px;" }
       Choose your filter
-    %hr{ style: "width: 100%; color: black; height: 1px; background-color:grey;" }
+    -#%hr{ style: "width: 100%; color: black; height: 1px; background-color:grey;" }
 
     .row.centered.text-center
       .col-md-5
         = f.input :number, label: 'X closest shops', placeholder: 'ex: 16'
       .col-md-2
         %br
-        %h4
+        %h5
           OR
       .col-md-5
         = f.input :range, label: 'Shops in X km range', placeholder: 'ex: 5'
-    %hr.text-center{ style: "margin-top: 50px; width: 100%; color: black; height: 1px; background-color:grey;" }
-      = f.submit 'Find Stores !', class: 'btn btn-lg btn-primary center-block'
+    .row{ style: "margin-top: 50px;" }
+      = f.submit 'Find Stores!', class: 'btn btn-lg btn-success center-block'
 
 
 .container{ style: "margin-top: 50px;" }
-  %br
+  %hr.text-center{ style: "width: 100%; color: black; height: 1px; background-color:grey;" }
   .row
-    %h3
-      = "#{@shops.map.count} Shops found:"
+    %h3.text-center
+      = "#{@shops.map.count} shops found"
+  .row
+    %br
     %table.table.table-striped.table-bordered
       %thead
         %td Distance
