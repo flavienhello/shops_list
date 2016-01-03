@@ -14,5 +14,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  get '/shops', to: 'shops#index'
+  post '/shops/find', to: 'shops#find'
+
   # resources :users
 end

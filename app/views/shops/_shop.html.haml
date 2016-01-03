@@ -1,0 +1,9 @@
+%td
+  - if @location && @location.lat && @location.lng
+    = "#{shop.distance_from( [@location.lat, @location.lng] ).round(1) } km"
+  - else
+    = 'N/A'
+%td
+  = "#{shop.name}"
+%td
+  = "#{shop.full_street_address}"

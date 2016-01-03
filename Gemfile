@@ -22,6 +22,7 @@ gem 'devise'
 gem 'haml-rails'
 gem 'pg'
 gem 'simple_form'
+gem 'geocoder'
 
 group :development do
   gem 'better_errors'

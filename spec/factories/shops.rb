@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :shop do
+  factory :shops do
     chain "MyString"
 name "MyString"
 latitude 1.5
