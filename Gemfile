@@ -23,6 +23,7 @@ gem 'haml-rails'
 gem 'pg'
 gem 'simple_form'
 gem 'geocoder'
+gem 'sprockets-rails', '~> 2.3.3'
 
 group :development do
   gem 'better_errors'
